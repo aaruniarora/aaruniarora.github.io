@@ -119,10 +119,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.project-card h3 {
-    margin-bottom: 10px;
-}
-
 .project-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -131,9 +127,10 @@ body {
 }
 
 .project-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 100%; /* Ensures the image fills its grid cell */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners for the images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
 }
 
 h2 {
