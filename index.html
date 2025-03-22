@@ -605,8 +605,22 @@
         <img src="images/linkedin-icon.png" alt="LinkedIn" />
       </a>
     </div>
+    <p id="last-updated"></p>
     <p>© Aaruni Arora. All rights reserved.</p>
   </footer>
+
+  <!-- For today's date -->
+  <script>
+    // Set current date
+    const updatedElement = document.getElementById("last-updated");
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-GB", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+    updatedElement.innerHTML = `Last updated: ${formattedDate}`;
+  </script>  
 
   <!-- JavaScript to Toggle Menu and Show Sections -->
   <script>
