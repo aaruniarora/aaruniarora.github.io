@@ -19,38 +19,41 @@
       background-color: #fff;
     }
 
+    /* Choose a softer navy (header & footer): e.g., #1E407C or #1F3B69 */
+    :root {
+      --navy-color: #1E407C;
+    }
+
     /* Header */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background-color: #002147; /* Dark blue for header bg */
+      background-color: var(--navy-color);
     }
-    /* The site name in the header */
     .logo h1 {
       margin: 0;
       font-size: 1.8rem;
-      color: #ffffff; /* Text in white to contrast the dark blue bg */
+      color: #ffffff;
       text-transform: uppercase;
     }
     .menu-btn {
       font-size: 1.5rem;
       background: none;
       border: none;
-      color: #fff; /* White to contrast the header bg */
+      color: #fff;
       cursor: pointer;
     }
 
-    /* Side Navigation (Now slides from the right) */
+    /* Side Navigation (slides from the right) */
     .side-menu {
       height: 100%;
       width: 0;
       position: fixed;
       z-index: 999;
       top: 0;
-      right: 0;       /* Key change: anchor to the right, not the left */
-      left: auto;     /* remove left positioning */
+      right: 0;
       background-color: #111;
       overflow-x: hidden;
       transition: 0.5s;
@@ -208,16 +211,24 @@
       gap: 1.5rem;
     }
 
+    /* Adjust the BibBase iframe styling */
+    #publications iframe {
+      width: 100%;
+      min-height: 700px;  /* Increase height so less scrolling */
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+    }
+
     /* Footer */
     .footer {
-      background-color: #002147; /* Same dark blue as header */
-      color: #fff;              /* White text to contrast */
+      background-color: var(--navy-color);
+      color: #fff;
       padding: 2rem;
       text-align: center;
       border-top: 1px solid #ccc;
     }
     .footer h2 {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       color: #fff;
     }
     .social-links {
@@ -237,6 +248,7 @@
     }
     .footer p {
       font-size: 0.9rem;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
@@ -265,7 +277,6 @@
     <section id="about" class="content-section">
       <div class="about-content">
         <div class="about-image">
-          <!-- Replace with your real photo path -->
           <img src="images/aaruni-webpage.jpg" alt="Aaruni Arora" />
         </div>
         <div class="about-text">
@@ -275,24 +286,22 @@
             at Imperial College London, with a Year in Industry. I am passionate about developing innovative 
             solutions for neurodegenerative disorders such as Cerebral Palsy, Autism, and Parkinson’s Disease.<br><br>
 
-            During my five-year program (2020–2025), I spent a year in Boston working at the 
+            During my five-year program (2020–2025), I spent a year in Boston working at 
             <a href="https://advancingcures.org/dogan-lab/" target="_blank">VIC, Harvard Medical School</a> and 
-            the <a href="https://www.l4te.org/" target="_blank">Traverso Lab, MIT</a>. My projects there involved 
+            the <a href="https://www.l4te.org/" target="_blank">Traverso Lab, MIT</a>. My projects involved 
             translational research on Type 1 Diabetes, smart pills, and EEG signal analysis, providing me with 
-            invaluable hands-on experience. These projects not only allowed me to grow technically and personally but 
-            also strengthened my drive to create impactful medical technologies. At Imperial, I’ve worked on a variety 
-            of projects, from automating gene editing and cancer cell detection to designing a stethoscope in OrCAD and 
-            creating AR-based games and hydrotherapy devices for children with Cerebral Palsy. My interest in the field 
-            began in high school, when I volunteered to teach self-defense techniques to children with autism, which 
-            motivated me to make life more enjoyable and inclusive for them.<br><br>
+            invaluable hands-on experience. At Imperial, I’ve worked on various projects, from automating gene editing 
+            and cancer cell detection to designing a stethoscope in OrCAD and creating AR-based hydrotherapy devices 
+            for children with Cerebral Palsy. My interest in the field began in high school, teaching self-defense 
+            techniques to children with autism, which motivated me to make life more enjoyable and inclusive for them.<br><br>
 
             I enjoy interdisciplinary research and collaborating across fields to learn new perspectives. For instance, 
             I am currently collaborating with Dr. Ferrari at LSE on a health economics project addressing violence 
-            against women. Beyond academia, I’ve contributed to financial research reports through the StockHub Analysis 
+            against women. Beyond academia, I’ve contributed to financial research reports with the StockHub Analysis 
             Group and worked in hospitality with Stint, UK.<br><br>
 
-            Looking ahead, I’m excited to pursue a PhD in 2025, with the goal of advancing bioengineering and 
-            neuroscience to make a real-world impact.<br><br>
+            Looking ahead, I’m excited to pursue a PhD in 2025, aiming to advance bioengineering and neuroscience to 
+            make a real-world impact.<br><br>
 
             Feel free to explore my projects and resume through the navigation bar!
           </p>
@@ -317,28 +326,23 @@
         Here are my research profiles:
         <a href="https://scholar.google.com/citations?hl=en&user=47zb13UAAAAJ" target="_blank">
           Google Scholar
-        </a> 
-        |
+        </a> |
         <a href="https://www.researchgate.net/profile/Aaruni-Arora" target="_blank">
           Research Gate
         </a>
       </p>
       
       <!-- Example: Embedding BibBase in an iframe -->
-      <!-- <iframe 
-        src="https://bibbase.org/show?bib=https://example.com/aaruni-publications.bib&jsonp=1"
-        style="width: 100%; height: 600px; border: 1px solid #ccc;">
-      </iframe> -->
-      
-      <!-- Or you can load BibBase via script: -->
-      <script src="https://bibbase.org/service/mendeley/f044d9cb-673d-33aa-af57-3413b5d9e4a9?jsonp=1"></script>
+      <iframe
+        src="https://bibbase.org/service/mendeley/f044d9cb-673d-33aa-af57-3413b5d9e4a9"
+      >
+      </iframe>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="content-section" style="display: none;">
       <h2 class="section-title">Projects</h2>
       <div class="projects-minimal">
-        <!-- Each project in a minimal card layout -->
         <div class="minimal-card" onclick="toggleDescription('hydrotherapy')">
           <h3>Hydrotherapy Device</h3>
           <p class="tagline">Floatation device for kids with Cerebral Palsy (CP)</p>
@@ -389,8 +393,8 @@
             <p><strong>Duration:</strong> October 2021 - June 2022</p>
             <p><strong>Affiliation:</strong> Imperial College London</p>
             <p>Engineered a floatation device for adolescents (up to 75kg) with cerebral palsy to play water sports. 
-               Presented and promoted the mechanical device to 30 potential clients at the National CP Swimming 
-               Competition in Nottingham and received positive feedback.</p>
+               Presented and promoted the device to 30 potential clients at the National CP Swimming Competition in 
+               Nottingham and received positive feedback.</p>
             <p><strong>Skills Gained:</strong> Device prototyping</p>
           `
         },
@@ -404,9 +408,8 @@
             <p><strong>Duration:</strong> November 2022 - January 2023</p>
             <p><strong>Affiliation:</strong> Imperial College London</p>
             <p>Developed and presented a 3D AR-based educational app for children aged five and above with CP GMFCS 
-               Levels 3 to 5 using Unity and Visual Studio (C#) to meet the client The Pace Centre’s criteria. 
-               Programmed an engaging quiz-based maze to improve critical thinking, problem-solving and collaboration 
-               skills by at least 5% among children using Dinomaze.</p>
+               Levels 3 to 5 using Unity (C#). The quiz-based maze improved problem-solving skills by at least 5% among 
+               children using Dinomaze.</p>
             <p><strong>Skills Gained:</strong> Unity, C#, game design, augmented reality</p>
           `
         },
@@ -419,10 +422,8 @@
           text: `
             <p><strong>Duration:</strong> October 2022 - June 2023</p>
             <p><strong>Affiliation:</strong> Imperial College London</p>
-            <p>Devised an innovative tool with Unity Game Engine, Augmented Reality (AR) and Arduino technologies to 
-               elevate interest and awareness of bioengineering-based solutions in GCSE students. Organised a pilot 
-               study to assess the interest of GCSE students in products similar to HeartReach and analysed a ~70% 
-               increase in the engagement rate post-product interaction.</p>
+            <p>Created an outreach tool using Unity, AR, and Arduino to spark interest in bioengineering for GCSE 
+               students. A pilot study indicated a ~70% boost in engagement post-product interaction.</p>
             <p><strong>Skills Gained:</strong> Arduino-Unity</p>
           `
         }
@@ -433,7 +434,7 @@
         const imageContainer = document.getElementById('description-images');
         const textContainer = document.getElementById('description-text');
 
-        // Close if the same project is clicked again
+        // If same project is clicked again, close it
         if (
           expandedSection.style.display === 'block' &&
           expandedSection.getAttribute('data-active') === id
@@ -456,33 +457,33 @@
       <div class="projects-minimal extras-grid">
         <div class="minimal-card" onclick="toggleExtras('taekwondo')">
           <h3>Taekwondo</h3>
-          <p class="tagline">green belt and competition judge</p>
+          <p class="tagline">Green belt and competition judge</p>
           <img src="images/taekwondo1.jpg" alt="Taekwondo" class="project-image" />
         </div>
         <div class="minimal-card" onclick="toggleExtras('dance')">
           <h3>Bharatnatyam: Indian Classical Dance</h3>
-          <p class="tagline">bharatnatyam performer and competitor</p>
+          <p class="tagline">Performer and competitor</p>
           <img src="images/dance1.jpg" alt="Dance" class="project-image" />
         </div>
         <div class="minimal-card" onclick="toggleExtras('investing')">
           <h3>Investing</h3>
-          <p class="tagline">learning global economics through stocks</p>
-          <img src="images/investing.jpg" alt="Investing" class="project-image" />
+          <p class="tagline">Learning global economics through stocks</p>
+          <img src="images/invest1.jpg" alt="Investing" class="project-image" />
         </div>
         <div class="minimal-card" onclick="toggleExtras('hiking')">
           <h3>Hiking</h3>
-          <p class="tagline">exploring nature and scenic trails</p>
-          <img src="images/hiking-placeholder.jpg" alt="Hiking" class="project-image" />
+          <p class="tagline">Exploring nature and scenic trails</p>
+          <img src="images/hike3.jpg" alt="Hiking" class="project-image" />
         </div>
         <div class="minimal-card" onclick="toggleExtras('baking')">
           <h3>Baking</h3>
-          <p class="tagline">sweet creations and pastry experiments</p>
-          <img src="images/baking-placeholder.jpg" alt="Baking" class="project-image" />
+          <p class="tagline">Sweet creations and experiments</p>
+          <img src="images/bake5.jpg" alt="Baking" class="project-image" />
         </div>
         <div class="minimal-card" onclick="toggleExtras('poetry')">
           <h3>Poetry</h3>
-          <p class="tagline">expressing emotions through words</p>
-          <img src="images/poetry-placeholder.jpg" alt="Poetry" class="project-image" />
+          <p class="tagline">Expressing emotions through words</p>
+          <img src="images/poet1.jpg" alt="Poetry" class="project-image" />
         </div>
       </div>
 
@@ -503,7 +504,7 @@
             `<video src="images/taekwondovid.mp4" controls muted></video>`
           ],
           text: `
-            <p>I am currently a green belt in Taekwondo. Additionally, I have participated in WT and judged both WT and 
+            <p>I am currently a green belt in Taekwondo. I have participated in WT and judged both WT and 
                ITF Taekwondo sparring competitions, showcasing my skills and knowledge in this martial art.</p>
           `
         },
@@ -513,48 +514,54 @@
             `<img src="images/dance2.jpg" alt="Dance Performance 2">`
           ],
           text: `
-            <p>I have been practicing Indian Classical Dance Bharatnatyam since I was a child. In 2016, I completed my 
-               Arangetram, a two-hour solo performance symbolizing graduation in dance. In 2018, I participated in the 
-               Asian Dance competition, and won the second prize. Follow my 
+            <p>I have been practicing Indian Classical Dance Bharatnatyam since I was a child. I completed my 
+               Arangetram in 2016, a two-hour solo performance symbolizing graduation in dance. In 2018, I participated 
+               in the Asian Dance competition and won second prize. Follow my 
                <a href='https://www.youtube.com/@Pranu2010/playlists' target='_blank'>YouTube account</a> 
-               to explore some of my dance routines and pieces.</p>
+               to explore my dance routines and pieces.</p>
           `
         },
         investing: {
           images: [
-            `<img src="images/investing.jpg" alt="Stock Market">`
+            `<img src="images/invest2.jpg" alt="Stock Market">`
           ],
           text: `
-            <p>I have recently started investing in the stock market. Apart from preparing for my future, I find 
-               investing fascinating because it provides insights into how the world works and enhances my 
-               understanding of global economics and industries.</p>
+            <p>I have recently started investing in the stock market. Aside from preparing for my future, it provides 
+               insights into global economics and helps me understand how industries function. However, I find that getting into
+               investing is pretty overwhelming, and all the youtube, instagram and tik-tok videos with their confusing news 
+               don't help. This is why I am working on building a duolingo-like software that might make it easier for you. 
+               Check it out!</p>
           `
         },
         hiking: {
           images: [
-            `<img src="images/hiking-placeholder.jpg" alt="Hiking Placeholder">`
+            `<img src="images/hike1.jpg" alt="Hiking 1">`,
+            `<img src="images/hike2.jpg" alt="Hiking 2">`
           ],
           text: `
-            <p>Placeholder text for hiking. You can add a description about where you’ve hiked, what you love about it, 
-               or any memorable trekking adventures.</p>
+            <p>Hiking is one of the other things that destresses me. Look at those beautiful views!</p>
           `
         },
         baking: {
           images: [
-            `<img src="images/baking-placeholder.jpg" alt="Baking Placeholder">`
+            `<img src="images/bake1.jpg" alt="Baking 1">`,
+            `<img src="images/bake2.jpg" alt="Baking 2">`, 
+            `<img src="images/bake3.jpg" alt="Baking 3">`,  
+            `<img src="images/bake4.jpg" alt="Baking 4">`, 
+            `<img src="images/bake5.jpg" alt="Baking 5">`,
+            `<img src="images/bake6.jpg" alt="Baking 6">`
           ],
           text: `
-            <p>Placeholder text for baking. Share your favorite recipes, baking challenges you’ve tackled, or why you 
-               enjoy creating sweet treats.</p>
+            <p>Some sweet treats made by yours truly!</p>
           `
         },
         poetry: {
           images: [
-            `<img src="images/poetry-placeholder.jpg" alt="Poetry Placeholder">`
+            `<img src="images/poet1.jpg" alt="Poetry Placeholder">`, 
+            `<img src="images/poet2.jpg" alt="Poetry Placeholder">`, 
           ],
           text: `
-            <p>Placeholder text for poetry. You can write about what themes you enjoy writing on, your favorite poets, 
-               or where you publish or perform your work.</p>
+            <p>Check out my poetry account on <a href='https://www.instagram.com/_poetter/?hl=en'>Instagram</a>!</p>
           `
         }
       };
