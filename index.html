@@ -6,6 +6,106 @@
     <title>Aaruni Arora - Professional Webpage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<style>
+    .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        text-transform: lowercase;
+        color: #333;
+    }
+
+    .projects-minimal {
+        display: flex;
+        justify-content: space-around;
+        gap: 1.5rem;
+    }
+
+    .minimal-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        background-color: #f9f9f9;
+        text-align: center;
+        cursor: pointer;
+        width: 30%;
+    }
+
+    .minimal-card:hover {
+        background-color: #f0f0f0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .minimal-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        text-transform: lowercase;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .project-image {
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+
+    .project-video {
+        width: 100%;
+        max-width: 250px;
+        border-radius: 8px;
+    }
+
+    .standardized {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .project-description {
+        display: none;
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        border: 1px solid #ddd;
+        width: 100%;
+    }
+
+    .description-row {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .description-images {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .description-images img {
+        width: 48%;
+        max-width: 250px;
+        border-radius: 8px;
+    }
+
+    .description-text {
+        flex: 1;
+        max-width: 50%;
+    }
+</style>
+
 <body>
     <!-- Header with Name and Menu Button -->
     <header class="header">
@@ -35,71 +135,18 @@
                 <div class="about-text">
                     <h2>Hello!</h2>
                     <p><br>I'm Aaruni Arora, currently in my final year of an integrated master’s in Biomedical Engineering at Imperial College London, with a Year in Industry. I am passionate about developing innovative solutions for neurodegenerative disorders such as Cerebral Palsy, Autism, and Parkinson’s Disease.<br><br>
-During my five-year program (2020–2025), I spent a year in Boston working at the <a href="https://advancingcures.org/dogan-lab/" target="_blank">VIC, Harvard Medical School</a> and the <a href="https://www.l4te.org/" target="_blank">Traverso Lab, MIT</a>. My projects there involved translational research on Type 1 Diabetes, smart pills, and EEG signal analysis, providing me with invaluable hands-on experience. These projects not only allowed me to grow technically and personally but also strengthened my drive to create impactful medical technologies. At Imperial, I’ve worked on a variety of projects, from automating gene editing and cancer cell detection to designing a stethoscope in OrCAD and creating AR-based games and hydrotherapy devices for children with Cerebral Palsy. My interest in the field began in high school, when I volunteered to teach self-defense techniques to children with autism, which motivated me to make life more enjoyable and inclusive for them.<br><br>
-I enjoy interdisciplinary research and collaborating across fields to learn new perspectives. For instance, I am currently collaborating with Dr. Ferrari at LSE on a health economics project addressing violence against women. Beyond academia, I’ve contributed to financial research reports through the StockHub Analysis Group and worked in hospitality with Stint, UK.<br><br>
-Looking ahead, I’m excited to pursue a PhD in 2025, with the goal of advancing bioengineering and neuroscience to make a real-world impact.<br><br>
-Feel free to explore my projects and resume through the navigation bar!</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="content-section" style="display: none;">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <h3>Hydrotherapy Device for Kids with Cerebral Palsy (Co-Project Leader/Manager)</h3>
-                    <p><strong>Duration:</strong> October 2021 - June 2022</p>
-                    <p><strong>Affiliation:</strong> Imperial College London</p>
-                    <div class="project-images">
-                        <video src="images/cpsportsdevicevid.mov" controls width="300">"Project 1 Image 2"</video>
-                    </div>
-                    <div class="project-images">
-                        <img src="images/cpsportsdevice.jpg" alt="Project 1 Image 2">
-                        <img src="images/cpsportsgroup.jpg" alt="Project 1 Image 3">
-                    </div>
-                    <p><strong>Description:</strong> Engineered a floatation device for adolescents (up to 75kg) with cerebral palsy to play water sports. Presented and promoted the mechanical device to 30 potential clients at the National CP Swimming Competition in Nottingham and received positive feedback.</p>
-                    <p><strong>Skills Gained:</strong> Device prototyping</p>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <h3>Dinomaze: AR Educational App Development for Cerebral Palsy Students</h3>
-                    <p><strong>Duration:</strong> November 2022 - January 2023</p>
-                    <p><strong>Affiliation:</strong> Imperial College London</p>
-                    <div class="project-images">
-                        <img src="images/cpgameAR.png" alt="Project 2 Image 1">
-                        <img src="images/cpgamequiz.png" alt="Project 2 Image 2">
-                        <img src="images/cpgamephone.png" alt="Project 2 Image 3">
-                    </div>
-                    <p><strong>Description:</strong> Developed and presented a 3D AR-based educational app for children aged five and above with CP GMFCS Levels 3 to 5 using Unity and Visual Studio (C#) to meet the client The Pace Centre’s criteria. Programmed an engaging quiz-based maze to improve critical thinking, problem-solving and collaboration skills by at least 5% among children using Dinomaze.</p>
-                    <p><strong>Skills Gained:</strong> Unity, C#, game design, augmented reality</p>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <h3>HeartReach: A Low-Cost Imperial Bioengineering Outreach</h3>
-                    <p><strong>Duration:</strong> October 2022 - June 2023</p>
-                    <p><strong>Affiliation:</strong> Imperial College London</p>
-                    <div class="project-images">
-                        <img src="images/heart1.jpg" alt="Project 3 Image 1">
-                        <img src="images/heart2.jpg" alt="Project 3 Image 2">
-                        <img src="images/heart3.jpg" alt="Project 3 Image 3">
-                        <img src="images/heart4.jpg" alt="Project 3 Image 4">
-                    </div>
-                    <div class="project-images">
-                        <img src="images/heart5.jpg" alt="Project 3 Image 5">
-                    </div>
-                    <p><strong>Description:</strong> Devised an innovative tool with Unity Game Engine, Augmented Reality (AR) and Arduino technologies to elevate interest and awareness of bioengineering-based solutions in GCSE students. Organised a pilot study to assess the interest of GCSE students in products similar to HeartReach and analysed a ~70% increase in the engagement rate post-product interaction.</p>
-                    <p><strong>Skills Gained:</strong> Arduino-Unity</p>
+                           During my five-year program (2020–2025), I spent a year in Boston working at the <a href="https://advancingcures.org/dogan-lab/" target="_blank">VIC, Harvard Medical School</a> and the <a href="https://www.l4te.org/" target="_blank">Traverso Lab, MIT</a>. My projects there involved translational research on Type 1 Diabetes, smart pills, and EEG signal analysis, providing me with invaluable hands-on experience. These projects not only allowed me to grow technically and personally but also strengthened my drive to create impactful medical technologies. At Imperial, I’ve worked on a variety of projects, from automating gene editing and cancer cell detection to designing a stethoscope in OrCAD and creating AR-based games and hydrotherapy devices for children with Cerebral Palsy. My interest in the field began in high school, when I volunteered to teach self-defense techniques to children with autism, which motivated me to make life more enjoyable and inclusive for them.<br><br>
+                           I enjoy interdisciplinary research and collaborating across fields to learn new perspectives. For instance, I am currently collaborating with Dr. Ferrari at LSE on a health economics project addressing violence against women. Beyond academia, I’ve contributed to financial research reports through the StockHub Analysis Group and worked in hospitality with Stint, UK.<br><br>
+                           Looking ahead, I’m excited to pursue a PhD in 2025, with the goal of advancing bioengineering and neuroscience to make a real-world impact.<br><br>
+                           Feel free to explore my projects and resume through the navigation bar!
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="resume" class="content-section" style="display: none;">
             <h2>Resume</h2>
-            <iframe src="Website Resume - Aaruni Arora (25 December 2024).pdf" width="100%" height="600px"></iframe>
+            <iframe src="Website Resume - Aaruni Arora (21 March 2025).pdf" width="100%" height="600px"></iframe>
         </section>
         
         <section id="publications" class="content-section" style="display: none;">
@@ -108,11 +155,85 @@ Feel free to explore my projects and resume through the navigation bar!</p>
             <!-- <iframe src="https://www.researchgate.net/profile/Aaruni-Arora" width="100%" height="600px"></iframe> -->
         </section>
 
-        <!-- <section id="extras" class="content-section" style="display: none;">
-            <h2>Extra Curriculars</h2>
-		<p>Outside of academia, I enjoy playing badminton and taekwondo. I am also a professional Bharatnatyam Dancer (Indian Classical Dancer). See my <a href="https://www.youtube.com/@Pranu2010/playlists" target="_blank">youtube account</a> for my Arangetram. This is a two-hour solo performance which symbolises graduation in dancing. I have also done the Allahbad exams for Bharatmnatyam. </p>
-		<iframe src="https://www.youtube.com/@Pranu2010/playlists" width="100%" height="600px"></iframe>
-        </section> -->
+        <section id="projects" class="content-section" style="display: none;">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-minimal">
+                <!-- Each project in a minimal card layout with images and expandable description -->
+                <div class="minimal-card" onclick="toggleDescription('hydrotherapy')">
+                    <h3>Hydrotherapy Device</h3>
+                    <p class="tagline">Floatation device for kids with Cerebral Palsy (CP)</p>
+                    <img src="images/cpsportsdevice.jpg" alt="Hydrotherapy Device" class="project-image standardized">
+                </div>
+                <div class="minimal-card" onclick="toggleDescription('dinomaze')">
+                    <h3>DINOMAZE</h3>
+                    <p class="tagline">AR quiz game for Cerebral Palsy (CP) students</p>
+                    <img src="images/cpgameAR.png" alt="Dinomaze Game" class="project-image standardized">
+                </div>
+                <div class="minimal-card" onclick="toggleDescription('heartreach')">
+                    <h3>HeartReach</h3>
+                    <p class="tagline">Interactive bioengineering outreach tool</p>
+                    <img src="images/heart1.jpg" alt="HeartReach Project" class="project-image standardized">
+                </div>
+            </div>
+        
+            <!-- Expanded Project Description Row -->
+            <div id="expanded-description" class="project-description">
+                <div class="description-row">
+                    <div class="description-images" id="description-images"></div>
+                    <div class="description-text" id="description-text"></div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            const projectData = {
+                hydrotherapy: {
+                    images: [`<video src="images/cpsportsdevicevid.mov" controls width="250" class="project-video">Video not supported by browser</video>`,
+                            `<img src="images/cpsportsgroup.jpg" alt="CP Device Group">`],
+                    text: `<p><strong>Duration:</strong> October 2021 - June 2022</p>
+                           <p><strong>Affiliation:</strong> Imperial College London</p>
+                           <p>Engineered a floatation device for adolescents (up to 75kg) with cerebral palsy to play water sports. Presented and promoted the mechanical device to 30 potential clients at the National CP Swimming Competition in Nottingham and received positive feedback.</p>
+                           <p><strong>Skills Gained:</strong> Device prototyping</p>`
+                },
+                dinomaze: {
+                    images: [`<img src="images/cpgameAR.png" alt="Project 2 Image 1">`,
+                            `<img src="images/cpgamequiz.png" alt="Project 2 Image 2">`,
+                            `<img src="images/cpgamephone.png" alt="Project 2 Image 3">`],
+                    text: `<p><strong>Duration:</strong> November 2022 - January 2023</p>
+                           <p><strong>Affiliation:</strong> Imperial College London</p>
+                           <p>Developed and presented a 3D AR-based educational app for children aged five and above with CP GMFCS Levels 3 to 5 using Unity and Visual Studio (C#) to meet the client The Pace Centre’s criteria. Programmed an engaging quiz-based maze to improve critical thinking, problem-solving and collaboration skills by at least 5% among children using Dinomaze.</p>
+                           <p><strong>Skills Gained:</strong> Unity, C#, game design, augmented reality</p>`
+                },
+                heartreach: {
+                    images: [`<img src="images/heart2.jpg" alt="Project 3 Image 2">`,
+                            `<img src="images/heart3.jpg" alt="Project 3 Image 3">`,
+                            `<img src="images/heart5.jpg" alt="Project 3 Image 5">`],
+                    text: `<p><strong>Duration:</strong> October 2022 - June 2023</p>
+                           <p><strong>Affiliation:</strong> Imperial College London</p>
+                           <p>Devised an innovative tool with Unity Game Engine, Augmented Reality (AR) and Arduino technologies to elevate interest and awareness of bioengineering-based solutions in GCSE students. Organised a pilot study to assess the interest of GCSE students in products similar to HeartReach and analysed a ~70% increase in the engagement rate post-product interaction.</p>
+                           <p><strong>Skills Gained:</strong> Arduino-Unity</p>`
+                }
+            };
+            
+            function toggleDescription(id) {
+                const expandedSection = document.getElementById('expanded-description');
+                const imageContainer = document.getElementById('description-images');
+                const textContainer = document.getElementById('description-text');
+
+                if (expandedSection.style.display === 'block' && expandedSection.getAttribute('data-active') === id) {
+                    expandedSection.style.display = 'none';
+                    expandedSection.setAttribute('data-active', '');
+                    return;
+                }
+
+                imageContainer.innerHTML = projectData[id].images.join('');
+                textContainer.innerHTML = projectData[id].text;
+
+                expandedSection.style.display = 'block';
+                expandedSection.setAttribute('data-active', id);
+            }
+        </script>
+        
 
         <section id="extras" class="content-section" style="display: none;">
             <h2>Extra Curriculars</h2>

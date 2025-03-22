@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaruni Arora - Professional Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Name and Menu Button -->
+    <header class="header">
+        <div class="logo">
+            <h1>AARUNI ARORA</h1>
+        </div>
+        <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+    </header>
+
+    <!-- Side Navigation Menu -->
+    <nav id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+        <a href="#about" onclick="showSection('about')">About Me</a>
+        <a href="#projects" onclick="showSection('projects')">Projects</a>
+        <a href="#resume" onclick="showSection('resume')">Resume</a>
+        <a href="#publications" onclick="showSection('publications')">Publications</a>
+        <a href="#extras" onclick="showSection('extras')">Extra Curriculars</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <section id="about" class="content-section">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/aaruni-webpage.jpg" alt="Aaruni Arora"> <!-- Replace with your photo path -->
+                </div>
+                <div class="about-text">
+                    <h2>Hello!</h2>
+                    <p><br>I'm Aaruni Arora, currently in my final year of an integrated master’s in Biomedical Engineering at Imperial College London, with a Year in Industry. I am passionate about developing innovative solutions for neurodegenerative disorders such as Cerebral Palsy, Autism, and Parkinson’s Disease.<br><br>
+During my five-year program (2020–2025), I spent a year in Boston working at the <a href="https://advancingcures.org/dogan-lab/" target="_blank">VIC, Harvard Medical School</a> and the <a href="https://www.l4te.org/" target="_blank">Traverso Lab, MIT</a>. My projects there involved translational research on Type 1 Diabetes, smart pills, and EEG signal analysis, providing me with invaluable hands-on experience. These projects not only allowed me to grow technically and personally but also strengthened my drive to create impactful medical technologies. At Imperial, I’ve worked on a variety of projects, from automating gene editing and cancer cell detection to designing a stethoscope in OrCAD and creating AR-based games and hydrotherapy devices for children with Cerebral Palsy. My interest in the field began in high school, when I volunteered to teach self-defense techniques to children with autism, which motivated me to make life more enjoyable and inclusive for them.<br><br>
+I enjoy interdisciplinary research and collaborating across fields to learn new perspectives. For instance, I am currently collaborating with Dr. Ferrari at LSE on a health economics project addressing violence against women. Beyond academia, I’ve contributed to financial research reports through the StockHub Analysis Group and worked in hospitality with Stint, UK.<br><br>
+Looking ahead, I’m excited to pursue a PhD in 2025, with the goal of advancing bioengineering and neuroscience to make a real-world impact.<br><br>
+Feel free to explore my projects and resume through the navigation bar!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section" style="display: none;">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>Hydrotherapy Device for Kids with Cerebral Palsy (Co-Project Leader/Manager)</h3>
+                    <p><strong>Duration:</strong> October 2021 - June 2022</p>
+                    <p><strong>Affiliation:</strong> Imperial College London</p>
+                    <div class="project-images">
+                        <video src="images/cpsportsdevicevid.mov" controls width="300">"Project 1 Image 2"</video>
+                    </div>
+                    <div class="project-images">
+                        <img src="images/cpsportsdevice.jpg" alt="Project 1 Image 2">
+                        <img src="images/cpsportsgroup.jpg" alt="Project 1 Image 3">
+                    </div>
+                    <p><strong>Description:</strong> Engineered a floatation device for adolescents (up to 75kg) with cerebral palsy to play water sports. Presented and promoted the mechanical device to 30 potential clients at the National CP Swimming Competition in Nottingham and received positive feedback.</p>
+                    <p><strong>Skills Gained:</strong> Device prototyping</p>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>Dinomaze: AR Educational App Development for Cerebral Palsy Students</h3>
+                    <p><strong>Duration:</strong> November 2022 - January 2023</p>
+                    <p><strong>Affiliation:</strong> Imperial College London</p>
+                    <div class="project-images">
+                        <img src="images/cpgameAR.png" alt="Project 2 Image 1">
+                        <img src="images/cpgamequiz.png" alt="Project 2 Image 2">
+                        <img src="images/cpgamephone.png" alt="Project 2 Image 3">
+                    </div>
+                    <p><strong>Description:</strong> Developed and presented a 3D AR-based educational app for children aged five and above with CP GMFCS Levels 3 to 5 using Unity and Visual Studio (C#) to meet the client The Pace Centre’s criteria. Programmed an engaging quiz-based maze to improve critical thinking, problem-solving and collaboration skills by at least 5% among children using Dinomaze.</p>
+                    <p><strong>Skills Gained:</strong> Unity, C#, game design, augmented reality</p>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>HeartReach: A Low-Cost Imperial Bioengineering Outreach</h3>
+                    <p><strong>Duration:</strong> October 2022 - June 2023</p>
+                    <p><strong>Affiliation:</strong> Imperial College London</p>
+                    <div class="project-images">
+                        <img src="images/heart1.jpg" alt="Project 3 Image 1">
+                        <img src="images/heart2.jpg" alt="Project 3 Image 2">
+                        <img src="images/heart3.jpg" alt="Project 3 Image 3">
+                        <img src="images/heart4.jpg" alt="Project 3 Image 4">
+                    </div>
+                    <div class="project-images">
+                        <img src="images/heart5.jpg" alt="Project 3 Image 5">
+                    </div>
+                    <p><strong>Description:</strong> Devised an innovative tool with Unity Game Engine, Augmented Reality (AR) and Arduino technologies to elevate interest and awareness of bioengineering-based solutions in GCSE students. Organised a pilot study to assess the interest of GCSE students in products similar to HeartReach and analysed a ~70% increase in the engagement rate post-product interaction.</p>
+                    <p><strong>Skills Gained:</strong> Arduino-Unity</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="content-section" style="display: none;">
+            <h2>Resume</h2>
+            <iframe src="Website Resume - Aaruni Arora (21 March 2025).pdf" width="100%" height="600px"></iframe>
+        </section>
+        
+        <section id="publications" class="content-section" style="display: none;">
+            <h2>Publications</h2>
+            <p>Visit <a href="https://scholar.google.com/citations?hl=en&user=47zb13UAAAAJ" target="_blank">Google Scholar</a> or <a href="https://www.researchgate.net/profile/Aaruni-Arora" target="_blank">Research Gate</a> to view my profile!</p>
+            <!-- <iframe src="https://www.researchgate.net/profile/Aaruni-Arora" width="100%" height="600px"></iframe> -->
+        </section>
+
+        <!-- <section id="extras" class="content-section" style="display: none;">
+            <h2>Extra Curriculars</h2>
+		<p>Outside of academia, I enjoy playing badminton and taekwondo. I am also a professional Bharatnatyam Dancer (Indian Classical Dancer). See my <a href="https://www.youtube.com/@Pranu2010/playlists" target="_blank">youtube account</a> for my Arangetram. This is a two-hour solo performance which symbolises graduation in dancing. I have also done the Allahbad exams for Bharatmnatyam. </p>
+		<iframe src="https://www.youtube.com/@Pranu2010/playlists" width="100%" height="600px"></iframe>
+        </section> -->
+
+        <section id="extras" class="content-section" style="display: none;">
+            <h2>Extra Curriculars</h2>
+            <p>Outside of academia, I enjoy:</p>
+            
+            <h3>1. Playing Taekwondo</h3>
+            <p>
+                I am currently a green belt in Taekwondo. Additionally, I have judged WT and ITF Taekwondo sparring competitions, showcasing my skills and knowledge in this martial art.
+            </p>
+            <div class="project-images">
+                <img src="images/taekwondo1.jpg" alt="Taekwondo Action 1" style="width: 100%; max-width: 300px; border-radius: 8px; margin: 10px;">
+                <img src="images/taekwondo2.jpg" alt="Taekwondo Action 2" style="width: 100%; max-width: 300px; border-radius: 8px; margin: 10px;">
+                <video src="images/taekwondovid.mp4" controls style="width: 100%; max-width: 600px; margin: 10px;"></video>
+            </div>
+        
+            <h3>2. Dancing</h3>
+            <p>
+                I have been practicing Indian Classical Dance Bharatnatyam since I was a child. In 2016, I completed my Arangetram, a two-hour solo performance symbolizing graduation in dance.
+                In 2018, I participated in the Asian Dance competition, and won the second prize.
+                Follow my <a href="https://www.youtube.com/@Pranu2010/playlists" target="_blank">YouTube account</a> to explore some of my dance routines and pieces.
+            </p>
+            <div class="project-images"> 
+                <img src="images/dance1.jpg" alt="Bharatnatyam Performance 1" style="width: 100%; max-width: 300px; border-radius: 8px; margin: 10px;">
+                <img src="images/dance2.jpg" alt="Bharatnatyam Performance 2" style="width: 100%; max-width: 300px; border-radius: 8px; margin: 10px;">
+            </div>
+        
+            <h3>3. Investing</h3>
+            <p>
+                I have recently started investing in the stock market. Apart from preparing for my future, I find investing fascinating because it provides insights into how the world works and enhances my understanding of global economics and industries.
+            </p>
+        </section>
+        
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <h2>Connect with me!</h2>
+        <div class="social-links">
+            <a href="mailto:aaruni.arora@gmail.com" target="_blank" title="Email">
+                <img src="images/email-icon.jpeg" alt="Email"> </a>
+            <a href="https://github.com/aaruniarora" target="_blank" title="GitHub">
+                <img src="images/github-icon.png" alt="GitHub"> </a>
+            <a href="https://www.linkedin.com/in/aaruniarora" target="_blank" title="LinkedIn">
+                <img src="images/linkedin-icon.png" alt="LinkedIn"> </a>
+        </div>
+        <p>© Aaruni Arora. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Toggle Menu and Show Sections -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('sideMenu');
+            if (menu.style.width === '250px') {
+                menu.style.width = '0';
+            } else {
+                menu.style.width = '250px';
+            }
+        }
+
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            toggleMenu(); // Close menu after clicking a link
+        }
+    </script>
+</body>
+</html>
