@@ -199,6 +199,12 @@
       object-fit: cover;
       height: auto;
     }
+    /* Full width override when there's only one image/video */
+    .description-images.single-item img,
+    .description-images.single-item video {
+      width: 100%;
+      max-width: 100%;
+    }
     .description-text {
       flex: 1;
       max-width: 500px;
@@ -370,6 +376,33 @@
             class="project-image"
           />
         </div>
+        <div class="minimal-card" onclick="toggleDescription('robo')">
+          <h3>Robotics</h3>
+          <p class="tagline">Animal Locomotion and Bioinspired Robotics</p>
+          <img 
+            src="images/robo.jpg" 
+            alt="Robotics Project" 
+            class="project-image"
+          />
+        </div>
+        <div class="minimal-card" onclick="toggleDescription('bravespace')">
+          <h3>BraveSpace</h3>
+          <p class="tagline">VR based exposure therapy game</p>
+          <img 
+            src="images/neurohack1.jpg" 
+            alt="NeuroHack Project" 
+            class="project-image"
+          />
+        </div>
+        <div class="minimal-card" onclick="toggleDescription('invest')">
+          <h3>InvestLearn</h3>
+          <p class="tagline">Learn the basics of investing</p>
+          <img 
+            src="images/invest1.jpg" 
+            alt="InvestLearn Project" 
+            class="project-image"
+          />
+        </div>
       </div>
 
       <!-- Expanded Project Description Row -->
@@ -426,6 +459,44 @@
                students. A pilot study indicated a ~70% boost in engagement post-product interaction.</p>
             <p><strong>Skills Gained:</strong> Arduino-Unity</p>
           `
+        },
+        robo: {
+          images: [
+            `<video src="images/robo.mp4" controls muted class="project-video">Video not supported by browser</video>`,
+          ],
+          text: `
+            <p><strong>Duration:</strong> January 2025 - March 2025</p>
+            <p><strong>Affiliation:</strong> Imperial College London</p>
+            <p>ANimal locomotion and bioinspired robotics</p>
+            <p><strong>Skills Gained:</strong> MATLAB, OpenMV, Robotics</p>
+          `
+        },
+        bravespace: {
+          images: [
+            `<video src="images/NeuroHack.mp4" controls muted class="project-video">Video not supported by browser</video>`,
+            `<img src="images/neurohack2.jpg" alt="Project 5">`,
+          ],
+          text: `
+            <p><strong>Duration:</strong> February 2025</p>
+            <p><strong>Affiliation:</strong> London Neurotech Hackathon</p>
+            <p>BraveSpace, a VR based exposure therapy game to overcome phobias, was built overnight during the ICL Neurotech Hackathon. 
+              We presented our approach on tackling fear and anxiety to a panel of industry and leading academic experts in the field. 
+              Competing against other students (undergrads, masters and PhDs), entrepreneurs and professors, 
+              we were thrilled to win the Judges’ Choice Award (2nd place) for this project. </p>
+            <p><strong>Skills Gained:</strong> Unity Engine (VR), Pitching</p>
+          `
+        },
+        invest: {
+          images: [
+            `<img src="images/invest2.png" alt="Project 6">`,
+          ],
+          text: `
+            <p><strong>Duration:</strong> March 2025</p>
+            <p>InvestLearn is a dynamic, gamified learning platform designed to teach you the fundamentals of investing—at your own pace, in a way that's fun and approachable. 
+              Whether you’re new to stocks, bonds, ETFs, or options, InvestLearn guides you step-by-step through the world of investing, 
+              helping you build the knowledge and confidence to take control of your financial future.</p>
+            <p><strong>Skills Gained:</strong> Building an MVP</p>
+          `
         }
       };
 
@@ -434,7 +505,9 @@
         const imageContainer = document.getElementById('description-images');
         const textContainer = document.getElementById('description-text');
 
-        // If same project is clicked again, close it
+        const { images, text } = projectData[id];
+
+        // Close if clicked again
         if (
           expandedSection.style.display === 'block' &&
           expandedSection.getAttribute('data-active') === id
@@ -444,10 +517,14 @@
           return;
         }
 
-        imageContainer.innerHTML = projectData[id].images.join('');
-        textContainer.innerHTML = projectData[id].text;
+        // Render image content
+        imageContainer.innerHTML = images.join('');
+        imageContainer.classList.toggle('single-item', images.length === 1);
+
+        textContainer.innerHTML = text;
         expandedSection.style.display = 'block';
         expandedSection.setAttribute('data-active', id);
+        expandedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     </script>
 
@@ -567,27 +644,30 @@
       };
 
       function toggleExtras(id) {
-        const section = document.getElementById('expanded-description-extras');
-        const images = document.getElementById('description-images-extras');
-        const text = document.getElementById('description-text-extras');
+      const section = document.getElementById('expanded-description-extras');
+      const images = document.getElementById('description-images-extras');
+      const text = document.getElementById('description-text-extras');
 
-        // Close if the same extracurricular is clicked again
-        if (
-          section.style.display === 'block' &&
-          section.getAttribute('data-active') === id
-        ) {
-          section.style.display = 'none';
-          section.setAttribute('data-active', '');
-          return;
-        }
-
-        images.innerHTML = extrasData[id].images.join('');
-        text.innerHTML = extrasData[id].text;
-        section.style.display = 'block';
-        section.setAttribute('data-active', id);
-
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Close if the same item is clicked again
+      if (
+        section.style.display === 'block' &&
+        section.getAttribute('data-active') === id
+      ) {
+        section.style.display = 'none';
+        section.setAttribute('data-active', '');
+        return;
       }
+
+      const media = extrasData[id].images;
+      images.innerHTML = media.join('');
+      images.classList.toggle('single-item', media.length === 1);
+
+      text.innerHTML = extrasData[id].text;
+      section.style.display = 'block';
+      section.setAttribute('data-active', id);
+
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     </script>
   </main>
 
