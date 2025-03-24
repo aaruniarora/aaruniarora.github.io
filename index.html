@@ -258,6 +258,16 @@
     }
   </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WSGXCXLVDG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WSGXCXLVDG');
+</script>
+
 <body>
   <!-- Header with Name and Menu Button -->
   <header class="header">
@@ -493,8 +503,9 @@
             <p><strong>Duration:</strong> March 2025</p>
             <p>InvestLearn is a dynamic, gamified learning platform designed to teach you the fundamentals of investing—at your own pace, in a way that's fun and approachable. 
               Whether you’re new to stocks, bonds, ETFs, or options, InvestLearn guides you step-by-step through the world of investing, 
-              helping you build the knowledge and confidence to take control of your financial future. 
-              Check it out <a href='https://learn-investing-play.lovable.app/' target="_blank" title="Investment App">here</a>!</p>
+              helping you build the knowledge and confidence to take control of your financial future. Check it out 
+              <a href='https://learn-investing-play.lovable.app/' target="_blank" title="Investment App"
+              onclick="gtag('event', 'click', {event_category: 'investing', event_label: 'investing-link'})">>here</a>!</p>
             <p><strong>Skills Gained:</strong> Building an MVP</p>
           `
         }
@@ -607,10 +618,11 @@
           ],
           text: `
             <p>I have recently started investing in the stock market. Aside from preparing for my future, it provides 
-               insights into global economics and helps me understand how industries function. However, I find that getting into
-               investing is pretty overwhelming, and all the youtube, instagram and tik-tok videos with their confusing news 
-               don't help. This is why I am working on building a duolingo-like software that might make it easier for you. 
-               Check it out <a href='https://learn-investing-play.lovable.app/' target="_blank" title="Investment App">here</a>!</p>
+              insights into global economics and helps me understand how industries function. However, I find that getting into
+              investing is pretty overwhelming, and all the youtube, instagram and tik-tok videos with their confusing news 
+              don't help. This is why I am working on building a duolingo-like software that might make it easier for you. Check it out 
+              <a href='https://learn-investing-play.lovable.app/' target="_blank" title="Investment App"
+              onclick="gtag('event', 'click', {event_category: 'investing', event_label: 'investing-link'})">>here</a>!</p>
           `
         },
         hiking: {
